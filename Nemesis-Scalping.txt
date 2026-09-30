@@ -56,7 +56,7 @@ lin_reg = input.bool(true, "Lin Reg", group=groupLinReg)
 linreg_length = input.int(11, "Linear Regression Length", minval=1, maxval=200, group=groupLinReg)
 
 //━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-// BIGBELUGA ORDER BLOCK INPUTS
+// ORDER BLOCK INPUTS
 //━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 gp_st = "Custom Supertrend Settings"
@@ -268,7 +268,7 @@ if sellEntry
     lastSellBar := bar_index
 
 //━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-// BIGBELUGA CUSTOM SUPERTREND
+// CUSTOM SUPERTREND
 //━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 src = hl2
@@ -469,7 +469,7 @@ bgcolor(showConsolidation and isConsolidating ? color.new(color.gray, 90) : na)
 barcolor(showMomentumCandles ? bullImpulse and volumePass ? color.lime : bearImpulse and volumePass ? color.red : na : na)
 
 //━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-// BIGBELUGA TREND CLOUD
+// TREND CLOUD
 //━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 st_plot = plot(market_trend != market_trend[1] ? float(na) : trend_stop, title="Trend Stop", color=market_trend == 1 ? cloud_bull_col : cloud_bear_col, linewidth=1, style=plot.style_linebr)
@@ -493,7 +493,7 @@ plotshape(buyExit, title="BUY EXIT", style=shape.labeldown, location=location.ab
 plotshape(sellExit, title="SELL EXIT", style=shape.labelup, location=location.belowbar, color=color.orange, text="EXIT", textcolor=color.black, size=size.tiny)
 
 //━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-// BIGBELUGA ORDER BLOCK RETEST MARKERS
+// ORDER BLOCK RETEST MARKERS
 //━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 plotshape(buy_retest, title="Bullish OB Retest", style=shape.cross, location=location.belowbar, color=bull_sig_col, size=size.tiny)
